@@ -48,7 +48,7 @@
 		<div class="container">
 			<!-- BEGIN LOGO -->
 			<div class="page-logo">
-				<a href="index.html"><img src="assets/admin/layout3/img/logo-default.png" alt="logo" class="logo-default"></a>
+				<a href="index.html"><img src="assets/admin/layout3/img/home.png" alt="logo" class="logo-default"></a>
 			</div>
 			<!-- END LOGO -->
 		</div>
@@ -94,7 +94,7 @@
 		<div class="container">
 			<!-- BEGIN PAGE TITLE -->
 			<div class="page-title">
-				<h1>Overview <small>statistics & reports</small></h1>
+				<h1>Overview <small>statistics & alerts</small></h1>
 			</div>
 			<!-- END PAGE TITLE -->
 			<!-- BEGIN PAGE TOOLBAR -->
@@ -111,15 +111,230 @@
 					<!-- BEGIN PORTLET-->
 
 					<div class="portlet light " style="height: 366px">
-						
+						<div class="portlet-title">
+							<div class="caption caption-md">
+								<i class="icon-bar-chart theme-font hide"></i>
+								<span class="caption-subject theme-font bold uppercase">Global Summary</span>
+								<span class="caption-helper hide">weekly stats...</span>
+							</div>
+							<div class="actions">
+								<div class="btn-group btn-group-devided" data-toggle="buttons">
+									<label class="btn btn-transparent grey-salsa btn-circle btn-sm active">
+									<input type="radio" name="options" class="toggle" id="option1">Today</label>
+									<label class="btn btn-transparent grey-salsa btn-circle btn-sm">
+									<input type="radio" name="options" class="toggle" id="option2">Week</label>
+									<label class="btn btn-transparent grey-salsa btn-circle btn-sm">
+									<input type="radio" name="options" class="toggle" id="option2">Month</label>
+								</div>
+							</div>
+						</div>
+						<div class="portlet-body">
+							<div class="row list-separated">
+								<div class="col-md-3 col-sm-3 col-xs-6">
+									
+									<div class="uppercase font-hg font-blue-sharp">
+										 16 <span class="font-lg font-grey-mint"></span>
+									</div>
+									<div class="font-grey-mint font-sm">
+										 Babies Saved
+									</div>
+								</div>
+								<div class="col-md-3 col-sm-3 col-xs-6">
+									
+									<div class="uppercase font-hg theme-font">
+										 48/61 <span class="font-lg font-grey-mint"></span>
+									</div>
+									<div class="font-grey-mint font-sm">
+										 Active Fireflies
+									</div>
+								</div>
+								<div class="col-md-3 col-sm-3 col-xs-6">
+									
+									<div class="uppercase font-hg font-purple">
+										 14 <span class="font-lg font-grey-mint"></span>
+									</div>
+									<div class="font-grey-mint font-sm">
+										 Countries
+									</div>
+								</div>
+								<div class="col-md-3 col-sm-3 col-xs-6">
+									
+									<div class="uppercase font-hg font-red-flamingo">
+										 2 <span class="font-lg font-grey-mint"></span>
+									</div>
+									<div class="font-grey-mint font-sm">
+										 Requests Pending
+									</div>
+								</div>
+							</div>
+							<div id="region_statistics_loading" >
+								<img src="assets/admin/layout3/img/global_graph.png" height: 300px alt="map"/>
+							</div>
+							<ul class="list-separated list-inline-xs hide">
+								<li>
+									<div class="font-grey-mint font-sm">
+										 Total Sales
+									</div>
+									<div class="uppercase font-hg font-red-flamingo">
+										 13,760 <span class="font-lg font-grey-mint">$</span>
+									</div>
+								</li>
+								<li>
+								</li>
+								<li class="border">
+									<div class="font-grey-mint font-sm">
+										 Revenue
+									</div>
+									<div class="uppercase font-hg theme-font">
+										 4,760 <span class="font-lg font-grey-mint">$</span>
+									</div>
+								</li>
+								<li class="divider">
+								</li>
+								<li>
+									<div class="font-grey-mint font-sm">
+										 Expenses
+									</div>
+									<div class="uppercase font-hg font-purple">
+										 11,760 <span class="font-lg font-grey-mint">$</span>
+									</div>
+								</li>
+								<li class="divider">
+								</li>
+								<li>
+									<div class="font-grey-mint font-sm">
+										 Growth
+									</div>
+									<div class="uppercase font-hg font-blue-sharp">
+										 9,760 <span class="font-lg font-grey-mint">$</span>
+									</div>
+								</li>
+							</ul>
+							<div id="sales_statistics" class="portlet-body-morris-fit morris-chart" style="height: 260px">
+							</div>
+						</div>
 					</div>
+					
 					<!-- END PORTLET-->
 				</div>
 				<div class="col-md-6 col-sm-12">
 					<!-- BEGIN PORTLET-->
 					<div class="portlet light " style="height: 366px">
-						
+						<div class="portlet-title tabbable-line">
+							<div class="caption caption-md">
+								<i class="icon-globe theme-font hide"></i>
+								<span class="caption-subject theme-font bold uppercase">Alerts</span>
+							</div>
+							
+						</div>
+						<div class="portlet-body">
+							<!--BEGIN TABS-->
+							<div class="tab-content">
+								<div class="tab-pane active" id="tab_1_1">
+									<div class="scroller" style="height: 337px;" data-always-visible="1" data-rail-visible1="0" data-handle-color="#D7DCE2">
+										<ul class="feeds">
+											<li>
+												<div class="col1">
+													<div class="cont">
+														<div class="cont-col1">
+															<div class="label label-sm label-success">
+																<i class="fa fa-bell-o"></i>
+															</div>
+														</div>
+														<div class="cont-col2">
+															<div class="desc">
+																 4 maintenance requests. <span class="label label-sm label-info">
+																Take action <i class="fa fa-share"></i>
+																</span>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="col2">
+													<div class="date">
+														 Just now
+													</div>
+												</div>
+											</li>
+											<li>
+												<a href="javascript:;">
+												<div class="col1">
+													<div class="cont">
+														<div class="cont-col1">
+															<div class="label label-sm label-success">
+																<i class="fa fa-bell-o"></i>
+															</div>
+														</div>
+														<div class="cont-col2">
+															<div class="desc">
+																 22 fireflies requests to be approved
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="col2">
+													<div class="date">
+														 20 mins
+													</div>
+												</div>
+												</a>
+											</li>
+											<li>
+												<div class="col1">
+													<div class="cont">
+														<div class="cont-col1">
+															<div class="label label-sm label-danger">
+																<i class="fa fa-bolt"></i>
+															</div>
+														</div>
+														<div class="cont-col2">
+															<div class="desc">
+																 Hanoi County Hospital power explosion
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="col2">
+													<div class="date">
+														 24 mins
+													</div>
+												</div>
+											</li>
+											<li>
+												<div class="col1">
+													<div class="cont">
+														<div class="cont-col1">
+															<div class="label label-sm label-info">
+																<i class="fa fa-bullhorn"></i>
+															</div>
+														</div>
+														<div class="cont-col2">
+															<div class="desc">
+																 HSBF requests new fireflies
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="col2">
+													<div class="date">
+														 30 mins
+													</div>
+												</div>
+											</li>
+											
+											
+											
+										</ul>
+									</div>
+								</div>
+								
+								
+							</div>
+							<!--END TABS-->
+						</div>
 					</div>
+						
+					
 					<!-- END PORTLET-->
 				</div>
 			</div>
@@ -127,6 +342,78 @@
 				<div class="col-md-6 col-sm-12">
 					<!-- BEGIN PORTLET-->
 					<div class="portlet light " style="height: 366px">
+						<div class="portlet-title">
+							<div class="caption caption-md">
+								<i class="icon-bar-chart theme-font hide"></i>
+								<span class="caption-subject theme-font bold uppercase">Regional Stats</span>
+							</div>
+							<div class="actions">
+								<a class="btn btn-circle btn-icon-only btn-default" href="javascript:;">
+								<i class="icon-cloud-upload"></i>
+								</a>
+								<a class="btn btn-circle btn-icon-only btn-default" href="javascript:;">
+								<i class="icon-wrench"></i>
+								</a>
+								<a class="btn btn-circle btn-icon-only btn-default fullscreen" href="javascript:;">
+								</a>
+								<a class="btn btn-circle btn-icon-only btn-default" href="javascript:;">
+								<i class="icon-trash"></i>
+								</a>
+							</div>
+						</div>
+						<div class="portlet-body">
+							<div id="region_statistics_loading">
+								<img src="assets/admin/layout3/img/world_map.png" alt="map" height: 300px/>
+							</div>
+							<div id="region_statistics_content" class="display-none">
+								<div class="btn-toolbar margin-bottom-10">
+									<div class="btn-group btn-group-circle" data-toggle="buttons">
+										<a href="" class="btn grey-salsa btn-sm active">
+										Users </a>
+										<a href="" class="btn grey-salsa btn-sm">
+										Orders </a>
+									</div>
+									<div class="btn-group pull-right">
+										<a href="" class="btn btn-circle grey-salsa btn-sm dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
+										Select Region <span class="fa fa-angle-down">
+										</span>
+										</a>
+										<ul class="dropdown-menu pull-right">
+											<li>
+												<a href="javascript:;" id="regional_stat_world">
+												World </a>
+											</li>
+											<li>
+												<a href="javascript:;" id="regional_stat_usa">
+												USA </a>
+											</li>
+											<li>
+												<a href="javascript:;" id="regional_stat_europe">
+												Europe </a>
+											</li>
+											<li>
+												<a href="javascript:;" id="regional_stat_russia">
+												Russia </a>
+											</li>
+											<li>
+												<a href="javascript:;" id="regional_stat_germany">
+												Germany </a>
+											</li>
+										</ul>
+									</div>
+								</div>
+								<div id="vmap_world" class="vmaps display-none">
+								</div>
+								<div id="vmap_usa" class="vmaps display-none">
+								</div>
+								<div id="vmap_europe" class="vmaps display-none">
+								</div>
+								<div id="vmap_russia" class="vmaps display-none">
+								</div>
+								<div id="vmap_germany" class="vmaps display-none">
+								</div>
+							</div>
+						</div>
 						
 					</div>
 					<!-- END PORTLET-->
@@ -134,6 +421,79 @@
 				<div class="col-md-6 col-sm-12">
 					<!-- BEGIN PORTLET-->
 					<div class="portlet light " style="height: 366px">
+						
+					<div class="portlet-title">
+							<div class="caption caption-md">
+								<i class="icon-bar-chart theme-font hide"></i>
+								<span class="caption-subject theme-font bold uppercase">Spotlight</span>
+							</div>
+							<div class="actions">
+								<a class="btn btn-circle btn-icon-only btn-default" href="javascript:;">
+								<i class="icon-cloud-upload"></i>
+								</a>
+								<a class="btn btn-circle btn-icon-only btn-default" href="javascript:;">
+								<i class="icon-wrench"></i>
+								</a>
+								<a class="btn btn-circle btn-icon-only btn-default fullscreen" href="javascript:;">
+								</a>
+								<a class="btn btn-circle btn-icon-only btn-default" href="javascript:;">
+								<i class="icon-trash"></i>
+								</a>
+							</div>
+						</div>
+						<div class="portlet-body">
+							<div id="region_statistics_loading">
+								<img src="assets/admin/layout3/img/spotlight_map.png" alt="map" height: 300px/>
+							</div>
+							<div id="region_statistics_content" class="display-none">
+								<div class="btn-toolbar margin-bottom-10">
+									<div class="btn-group btn-group-circle" data-toggle="buttons">
+										<a href="" class="btn grey-salsa btn-sm active">
+										Users </a>
+										<a href="" class="btn grey-salsa btn-sm">
+										Orders </a>
+									</div>
+									<div class="btn-group pull-right">
+										<a href="" class="btn btn-circle grey-salsa btn-sm dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
+										Select Region <span class="fa fa-angle-down">
+										</span>
+										</a>
+										<ul class="dropdown-menu pull-right">
+											<li>
+												<a href="javascript:;" id="regional_stat_world">
+												World </a>
+											</li>
+											<li>
+												<a href="javascript:;" id="regional_stat_usa">
+												USA </a>
+											</li>
+											<li>
+												<a href="javascript:;" id="regional_stat_europe">
+												Europe </a>
+											</li>
+											<li>
+												<a href="javascript:;" id="regional_stat_russia">
+												Russia </a>
+											</li>
+											<li>
+												<a href="javascript:;" id="regional_stat_germany">
+												Germany </a>
+											</li>
+										</ul>
+									</div>
+								</div>
+								<div id="vmap_world" class="vmaps display-none">
+								</div>
+								<div id="vmap_usa" class="vmaps display-none">
+								</div>
+								<div id="vmap_europe" class="vmaps display-none">
+								</div>
+								<div id="vmap_russia" class="vmaps display-none">
+								</div>
+								<div id="vmap_germany" class="vmaps display-none">
+								</div>
+							</div>
+						</div>
 						
 					</div>
 					<!-- END PORTLET-->
