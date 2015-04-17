@@ -19,4 +19,10 @@ $(".alertButton").click(function(){
 	$(this).closest('.li').remove();
 });
 
+$(".resolveButton").click(function(){
+	$(this).hide();
+	var tr = $(this).closest("td");
+	tr.html("Resolved");
+});
+
 setInterval(addAlertToFeed, 10000);
