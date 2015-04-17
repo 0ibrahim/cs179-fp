@@ -7,7 +7,16 @@ var visibleObject = listObject.removeClass("hidden")
 
 function addAlertToFeed() {
 	showAlert();
-	visibleObject.clone().prependTo("#myFeed").show("slow");	
+	visibleObject.clone().prependTo("#myFeed").show("slow");
+
+	$(".alertButton").click(function(){
+		$(this).closest('#myHiddenList').remove();
+	});	
 }
+
+$(".alertButton").click(function(){
+	console.log("working")
+	$(this).closest('.li').remove();
+});
 
 setInterval(addAlertToFeed, 10000);
