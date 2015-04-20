@@ -147,10 +147,10 @@ var TableAdvanced = function () {
         function fnFormatDetails(oTable, nTr) {
             var aData = oTable.fnGetData(nTr);
             var sOut = '<table>';
-            sOut += '<tr><td>Platform(s):</td><td>' + aData[2] + '</td></tr>';
-            sOut += '<tr><td>Engine version:</td><td>' + aData[3] + '</td></tr>';
-            sOut += '<tr><td>CSS grade:</td><td>' + aData[4] + '</td></tr>';
-            sOut += '<tr><td>Others:</td><td>Could provide a link here</td></tr>';
+            sOut += '<tr><td>First Detection of Issue:</td><td> 23 days ago</td></tr>';
+            sOut += '<tr><td>Previous Issues Encountered:</td><td> Lights Out (1/30/14, 3/6/15)</td></tr>';
+            sOut += '<tr><td>Hospital Administrator:</td><td> Dwayne Johnson </td></tr>';
+            sOut += '<tr><td>Hospital Administrator Contact:</td><td> +43 9194583402, dwaynejohnson@socialenterprise.org </td></tr>';
             sOut += '</table>';
 
             return sOut;

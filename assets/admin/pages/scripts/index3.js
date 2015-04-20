@@ -73,8 +73,8 @@ var Index = function() {
             setMap("world");
             setMap("usa");
             setMap("europe");
-            setMap("russia");
-            setMap("germany");
+            //setMap("russia");
+            //setMap("germany");
             showMap("world");
 
             jQuery('#regional_stat_world').click(function() {
