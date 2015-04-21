@@ -7,10 +7,6 @@
 
 
 
-
-
-
-
 <head>
 <meta charset="utf-8"/>
 <title>Metronic | Advanced Datatables</title>
@@ -137,214 +133,284 @@
 							<table class="table table-bordered table-hover" id="sample_3">
 							<thead>
 							<tr>
-								<th>
-									Date of Issue
-								</th>
-								<th>
-									Issue
-								</th>
-								<th>
-									 Hospital 
-								</th>
-								<th>
-									 Location
-								</th>
-								<th>
-									 Serial Number
-								</th>
-								<th>
-									 Point Person 
-								</th>
-								<th>
-									 Status
-								</th>
-								<th>
-									 Action
-								</th>
+								<th>Issue ID </th>
+								<th>Type of Issue</th>
+								<th>Issue Detail</th>
+								<th>Severity</th>
+								<th>Hospital</th>
+								<th>Firefly ID</th>
+								<th>First Report of Problem</th>
+								<th>Point Person</th>
+								<th>Status</th>
+								<th>Action</th>
 							</tr>
 							</thead>
 							<tbody>
-							<tr>
-								<td>
-									 4/30/15
-								</td>
-								<td>
-									 Not Turned On for 30 Days
-								</td>
-								<td>
-									 St. Boniface Hospital 
-								</td>
-								<td>
-									 Fond-Des-Blancs, Haiti
-								</td>
-								<td>
-									 456729
-								</td>
-								<td>
-									 Efua Gyad
-								</td>
-								<td>
-									Not Resolved
+							<tr><td>10000001</td>
+							<td>Maintenance</td>
+							<td>Lights out, suspected power surge</td>
+							<td>High</td>
+							<td>Hanoi County Hospital No. 3</td>
+							<td>951008</td>
+							<td>4/24/15</td>
+							<td> </td>
+							<td>Not Resolved</td>
+							<td><button type="button" class="btn btn-warning" data-toggle = "modal" href = "#basic"><span class="md-click-circle md-click-animate"></span>Assign</button></td>
+							</tr>
+							<tr><td>10000002</td>
+							<td>Maintenance</td>
+							<td>Lights out, suspected power surge</td>
+							<td>High</td>
+							<td>Hanoi County Hospital No. 3</td>
+							<td>888820</td>
+							<td>4/24/15</td>
+							<td> </td>
+							<td>Not Resolved</td>
+							<td><button type="button" class="btn btn-warning" data-toggle = "modal" href = "#basic"><span class="md-click-circle md-click-animate"></span>Assign</button></td>
+							</tr>
+							<tr><td>10000003</td>
+							<td>Maintenance</td>
+							<td>Lights out, suspected power surge</td>
+							<td>High</td>
+							<td>Hanoi County Hospital No. 3</td>
+							<td>835417</td>
+							<td>4/24/15</td>
+							<td> </td>
+							<td>Not Resolved</td>
+							<td><button type="button" class="btn btn-warning" data-toggle = "modal" href = "#basic"><span class="md-click-circle md-click-animate"></span>Assign</button></td>
+							</tr>
+							<tr><td>10000004</td>
+							<td>Maintenance</td>
+							<td>Lights out, suspected power surge</td>
+							<td>High</td>
+							<td>Hanoi County Hospital No. 3</td>
+							<td>781806</td>
+							<td>4/24/15</td>
+							<td> </td>
+							<td>Not Resolved</td>
+							<td><button type="button" class="btn btn-warning" data-toggle = "modal" href = "#basic"><span class="md-click-circle md-click-animate"></span>Assign</button></td>
+							</tr>
+							<tr><td>10000005</td>
+							<td>Usage</td>
+							<td>Not turned on for 30 days</td>
+							<td>Medium</td>
+							<td>St. Boniface Hospital</td>
+							<td>433191</td>
+							<td>4/30/15</td>
+							<td>Karen Kennedy</td>
+							<td>Assigned</td>
+							<td><button type="button" class="btn btn-success resolveButton"><span class="md-click-circle md-click-animate"></span>Resolved</button></td>
+							</tr>
+							<tr><td>10000005</td>
+							<td>Replacement</td>
+							<td>&gt; 50,000 hours of service</td>
+							<td>High</td>
+							<td>St. Boniface</td>
+							<td>208316</td>
+							<td>8/9/14</td>
+							<td>Karen Kennedy</td>
+							<td>Assigned</td>
+							<td><button type="button" class="btn btn-success resolveButton"><span class="md-click-circle md-click-animate"></span>Resolved</button></td>
+							</tr>
+							<tr><td>10000006</td>
+							<td>Replacement</td>
+							<td>&gt; 50,000 hours of service</td>
+							<td>High</td>
+							<td>Atlantis</td>
+							<td>640042</td>
+							<td>5/23/14</td>
+							<td>Jean Fils</td>
+							<td>Assigned</td>
+							<td><button type="button" class="btn btn-success resolveButton"><span class="md-click-circle md-click-animate"></span>Resolved</button></td>
+							</tr>
+							<tr><td>10000007</td>
+							<td>No response</td>
+							<td>No response for 10 days</td>
+							<td>Low</td>
+							<td>Saigon National Hospital</td>
+							<td>658590</td>
+							<td>4/26/15</td>
+							<td>An Dhat</td>
+							<td>Assigned</td>
+							<td><button type="button" class="btn btn-success resolveButton"><span class="md-click-circle md-click-animate"></span>Resolved</button></td>
+							</tr>
+							<tr><td>92428951</td>
+							<td>No response</td>
+							<td>No response for 30 days</td>
+							<td>Medium</td>
+							<td>Saigon National Hospital</td>
+							<td>521476</td>
+							<td>4/27/15</td>
+							<td>An Dhat</td>
+							<td>Assigned</td>
+							<td>Resolved</td>
+							</tr>
+							<tr><td>80468703</td>
+							<td>Usage</td>
+							<td>Not turned on for 10 days</td>
+							<td>Low</td>
+							<td>St. Boniface Hospital</td>
+							<td>726641</td>
+							<td>4/25/15</td>
+							<td>Efua Gyad</td>
+							<td>Resolved</td>
+							<td>None</td>
+							</tr>
+							<tr><td>26222896</td>
+							<td>Onboarding</td>
+							<td>4 New fireflies added</td>
+							<td>Low</td>
+							<td>Hanoi County Hospital No. 3</td>
+							<td>149838</td>
+							<td>4/28/15</td>
+							<td>Mai Nguyen</td>
+							<td>Resolved</td>
+							<td>None</td>
+							</tr>
+							<tr><td>64235991</td>
+							<td>Maintenance</td>
+							<td>Lights out for 10 days</td>
+							<td>High</td>
+							<td>St. Boniface Hospital</td>
+							<td>340929</td>
+							<td>4/29/15</td>
+							<td>Efua Gyad</td>
+							<td>Resolved</td>
+							<td>None</td>
+							</tr>
+							<tr><td>17477504</td>
+							<td>Usage</td>
+							<td>Persistant high temperatures (15 days)</td>
+							<td>Medium</td>
+							<td>Children&#39;s Investment Fund Foundation</td>
+							<td>934255</td>
+							<td>7/18/14</td>
+							<td>Karen Kennedy</td>
+							<td>Resolved</td>
+							<td>None</td>
+							</tr>
+							<tr><td>11468880</td>
+							<td>Maintenance</td>
+							<td>Lights out</td>
+							<td>High</td>
+							<td>Boston Children&#39;s</td>
+							<td>851052</td>
+							<td>2/12/15</td>
+							<td>Bill Farmer</td>
+							<td>Resolved</td>
+							<td>None</td>
+							</tr>
+							<tr><td>65566788</td>
+							<td>Maintenance</td>
+							<td>Lights out</td>
+							<td>High</td>
+							<td>Hanoi County No. 3</td>
+							<td>964903</td>
+							<td>11/4/13</td>
+							<td>Efua Gyad</td>
+							<td>Resolved</td>
+							<td>None</td>
+							</tr>
+							<tr><td>91125049</td>
+							<td>Usage</td>
+							<td>Not turned on for 10 Days</td>
+							<td>Low</td>
+							<td>Laos Friends</td>
+							<td>207585</td>
+							<td>3/9/13</td>
+							<td>An Dhat</td>
+							<td>Resolved</td>
+							<td>None</td>
+							</tr>
+							<tr><td>76522626</td>
+							<td>No response</td>
+							<td>No response for 10 days</td>
+							<td>Low</td>
+							<td>Mahosot</td>
+							<td>679796</td>
+							<td>6/3/14</td>
+							<td>Efua Gyad</td>
+							<td>Resolved</td>
+							<td>None</td>
+							</tr>
+							<tr><td>22639481</td>
+							<td>No response</td>
+							<td>No response for 30 days</td>
+							<td>Medium</td>
+							<td>Soni</td>
+							<td>594099</td>
+							<td>10/6/14</td>
+							<td>Mark Brown</td>
+							<td>Resolved</td>
+							<td>None</td>
+							</tr>
+							<tr><td>77018330</td>
+							<td>Onboarding</td>
+							<td>3 new fireflies added</td>
+							<td>Low</td>
+							<td>Laos Friends</td>
+							<td>590980</td>
+							<td>3/26/13</td>
+							<td>An Dhat</td>
+							<td>Resolved</td>
+							<td>None</td>
+							</tr>
+							<tr><td>47059536</td>
+							<td>Usage</td>
+							<td>Lights out for 30 days</td>
+							<td>High</td>
+							<td>Boston Children&#39;s</td>
+							<td>300407</td>
+							<td>9/15/14</td>
+							<td>Bill Farmer</td>
+							<td>Resolved</td>
+							<td>None</td>
+							</tr>
+							<tr><td>39823334</td>
+							<td>No response</td>
+							<td>Not turned on for 30 days</td>
+							<td>Medium</td>
+							<td>St. Boniface Hospital</td>
+							<td>346985</td>
+							<td>1/19/13</td>
+							<td>Mark Brown</td>
+							<td>Resolved</td>
+							<td>None</td>
+							</tr>
+							<tr><td>45848173</td>
+							<td>Maintenance</td>
+							<td>Lights out, suspected power outage</td>
+							<td>High</td>
+							<td>Saigon National Hospital</td>
+							<td>328871</td>
+							<td>10/10/14</td>
+							<td>Bill Farmer</td>
+							<td>Resolved</td>
+							<td>None</td>
+							</tr>
+							<tr><td>44766204</td>
+							<td>Maintenance</td>
+							<td>Lights out, suspected power outage</td>
+							<td>High</td>
+							<td>Saigon National Hospital</td>
+							<td>411723</td>
+							<td>9/27/13</td>
+							<td>An Dhat</td>
+							<td>Resolved</td>
+							<td>None</td>
+							</tr>
+							<tr><td>71131641</td>
+							<td>Usage</td>
+							<td>Not turned on for 10 days</td>
+							<td>Low</td>
+							<td>Hanoi County Hospital No. 3</td>
+							<td>569341</td>
+							<td>3/22/13</td>
+							<td>Efua Gyad</td>
+							<td>Resolved</td>
+							<td>None</td>
+							</tr>
 
-								</td>
-								<td>
-									
-									 <button type="button" class="btn btn-warning" data-toggle = "modal" href = "#basic"><span class="md-click-circle md-click-animate"></span>Assign</button>
-								</td>
-							</tr>
-								<td>
-									 4/29/15
-								</td>
-								<td>
-									 Light Out for 10 days
-								</td>
-								<td>
-									 St. Boniface Hospital 
-								</td>
-								<td>
-									 Fond-Des-Blancs, Haiti
-								</td>
-								<td>
-									 456725
-								</td>
-								<td>
-									 Efua Gyad
-								</td>
-								<td>
-									Not Resolved
-								</td>
-								<td>
-									 <button type="button" class="btn btn-warning" data-toggle = "modal" href = "#basic"><span class="md-click-circle md-click-animate"></span>Assign</button>
-								</td>
-							</tr>
-							<tr>
-								<td>
-									 4/28/15
-								</td>
-								<td>
-									 4 New Fireflies Added
-								</td>
-								<td>
-									 Hanoi County Hospital No. 3
-								</td>
-								<td>
-									 Hanoi, Haiti
-								</td>
-								<td>
-									 456328
-								</td>
-								<td>
-									 Mai Nguyen
-								</td>
-								<td>
-									Not Resolved
-								</td>
-								<td>
-									 <button type="button" class="btn btn-warning" data-toggle = "modal" href = "#basic"><span class="md-click-circle md-click-animate"></span>Assign</button>
-								</td>
-							</tr>
-							<tr>
-								<td>
-									 4/27/15
-								</td>
-								<td>
-									 No Response for 30 days
-								</td>
-								<td>
-									 Saigon National Hospital
-								</td>
-								<td>
-									 Saigon, Vietnam
-								</td>
-								<td>
-									 456328
-								</td>
-								<td>
-									 An Dhat
-								</td>
-								<td>
-									Not Resolved
-								</td>
-								<td>
-									 <button type="button" class="btn btn-success resolveButton"><span class="md-click-circle md-click-animate"></span>Resolve</button>
-								</td>
-							</tr>
-							<tr>
-								<td>
-									 4/26/15
-								</td>
-								<td>
-									 No Response for 10 days
-								</td>
-								<td>
-									 Saigon National Hospital
-								</td>
-								<td>
-									 Saigon, Vietnam
-								</td>
-								<td>
-									 347623
-								</td>
-								<td>
-									 An Dhat
-								</td>
-								<td>
-									Not Resolved
-								</td>
-								<td>
-									 <button type="button" class="btn btn-danger" data-toggle = "modal" href = "#basic"><span class="md-click-circle md-click-animate"></span>Follow-Up</button>
-								</td>
-							</tr>
-							<tr>
-								<td>
-									 4/25/15
-								</td>
-								<td>
-									 Not Turned On for 10 Days
-								</td>
-								<td>
-									 St. Boniface Hospital 
-								</td>
-								<td>
-									 Fond-Des-Blancs, Haiti
-								</td>
-								<td>
-									 456425
-								</td>
-								<td>
-									 Efua Gyad
-								</td>
-								<td>
-									 Resolved
-								</td>
-								<td>
-								</td>								
-							</tr>	
-							<tr>
-								<td>
-									 4/24/15
-								</td>
-								<td>
-									 Lights Out
-								</td>
-								<td>
-									 Hanoi County Hospital No. 3
-								</td>
-								<td>
-									 Hanoi, Haiti
-								</td>
-								<td>
-									 451425
-								</td>
-								<td>
-									 Mai Nguyen
-								</td>
-								<td>
-									 Resolved
-								</td>
-								<td>
-								</td>	
-							</tr>																				
 							</tbody>
 							</table>
 						</div>
