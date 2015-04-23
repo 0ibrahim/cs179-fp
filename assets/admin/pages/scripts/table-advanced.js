@@ -143,14 +143,18 @@ var TableAdvanced = function () {
     var initTable3 = function () {
         var table = $('#sample_3');
 
+        
         /* Formatting function for row details */
         function fnFormatDetails(oTable, nTr) {
             var aData = oTable.fnGetData(nTr);
             var sOut = '<table>';
-            sOut += '<tr><td>First Detection of Issue:</td><td> 23 days ago</td></tr>';
-            sOut += '<tr><td>Previous Issues Encountered:</td><td> Lights Out (1/30/14, 3/6/15)</td></tr>';
+            sOut += '<tr><td>E:</td><td></tr>';
+
+            sOut += '<tr><td></td><td>Date</td><td>Problem</td><td>Issue ID</td><td>Issue Followups</td></tr>';
+            sOut += '<tr><td></td><td>4/5/2003</td><td>Overheating</td><td>3456789</td><td>1</td></tr>';
+           /* sOut += '<tr><td>Previous Issues Encountered:</td><td> Lights Out (1/30/14, 3/6/15)</td></tr>';
             sOut += '<tr><td>Hospital Administrator:</td><td> Dwayne Johnson </td></tr>';
-            sOut += '<tr><td>Hospital Administrator Contact:</td><td> +43 9194583402, dwaynejohnson@socialenterprise.org </td></tr>';
+            sOut += '<tr><td>Hospital Administrator Contact:</td><td> +43 9194583402, dwaynejohnson@socialenterprise.org </td></tr>';*/
             sOut += '</table>';
 
             return sOut;

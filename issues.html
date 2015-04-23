@@ -5,8 +5,6 @@
 <html lang="en" class="no-js">
 <!--<![endif]-->
 
-
-
 <head>
 <meta charset="utf-8"/>
 <title>Metronic | Advanced Datatables</title>
@@ -37,13 +35,9 @@
 <link href="assets/admin/layout3/css/custom.css" rel="stylesheet" type="text/css">
 <!-- END THEME STYLES -->
 <link rel="shortcut icon" href="favicon.ico"/>
+
 </head>
 <!-- END HEAD -->
-
-
-
-
-
 
 
 <!-- BEGIN BODY -->
@@ -138,8 +132,8 @@
 								<th>Issue Detail</th>
 								<th>Severity</th>
 								<th>Hospital</th>
-								<th>Firefly ID</th>
-								<th>First Report of Problem</th>
+								<th>Serial</th>
+								<th>First Reported</th>
 								<th>Point Person</th>
 								<th>Status</th>
 								<th>Action</th>
@@ -150,56 +144,23 @@
 							<td>Maintenance</td>
 							<td>Lights out, suspected power surge</td>
 							<td>High</td>
-							<td>Hanoi County Hospital No. 3</td>
+							<td>Hanoi County No. 3</td>
 							<td>951008</td>
 							<td>4/24/15</td>
-							<td> </td>
-							<td>Not Resolved</td>
-							<td><button type="button" class="btn btn-warning" data-toggle = "modal" href = "#basic"><span class="md-click-circle md-click-animate"></span>Assign</button></td>
-							</tr>
-							<tr><td>10000002</td>
-							<td>Maintenance</td>
-							<td>Lights out, suspected power surge</td>
-							<td>High</td>
-							<td>Hanoi County Hospital No. 3</td>
-							<td>888820</td>
-							<td>4/24/15</td>
-							<td> </td>
-							<td>Not Resolved</td>
-							<td><button type="button" class="btn btn-warning" data-toggle = "modal" href = "#basic"><span class="md-click-circle md-click-animate"></span>Assign</button></td>
-							</tr>
-							<tr><td>10000003</td>
-							<td>Maintenance</td>
-							<td>Lights out, suspected power surge</td>
-							<td>High</td>
-							<td>Hanoi County Hospital No. 3</td>
-							<td>835417</td>
-							<td>4/24/15</td>
-							<td> </td>
-							<td>Not Resolved</td>
-							<td><button type="button" class="btn btn-warning" data-toggle = "modal" href = "#basic"><span class="md-click-circle md-click-animate"></span>Assign</button></td>
-							</tr>
-							<tr><td>10000004</td>
-							<td>Maintenance</td>
-							<td>Lights out, suspected power surge</td>
-							<td>High</td>
-							<td>Hanoi County Hospital No. 3</td>
-							<td>781806</td>
-							<td>4/24/15</td>
-							<td> </td>
-							<td>Not Resolved</td>
-							<td><button type="button" class="btn btn-warning" data-toggle = "modal" href = "#basic"><span class="md-click-circle md-click-animate"></span>Assign</button></td>
+							<td id="pointperson"> </td>
+							<td id='status'>Not Resolved</td>
+							<td id='action'><button type="button" class="btn btn-warning" data-toggle = "modal" href = "#basic" id='assignbutton'><span class="md-click-circle md-click-animate"></span>Assign</button></td>
 							</tr>
 							<tr><td>10000005</td>
 							<td>Usage</td>
 							<td>Not turned on for 30 days</td>
 							<td>Medium</td>
-							<td>St. Boniface Hospital</td>
+							<td>St. Boniface</td>
 							<td>433191</td>
 							<td>4/30/15</td>
 							<td>Karen Kennedy</td>
-							<td>Assigned</td>
-							<td><button type="button" class="btn btn-success resolveButton"><span class="md-click-circle md-click-animate"></span>Resolved</button></td>
+							<td id='status2'>Assigned</td>
+							<td id='action2'> <button type="button" class="btn btn-success resolveButton" id="resolve2"><span class="md-click-circle md-click-animate"></span>Resolved</button></td>
 							</tr>
 							<tr><td>10000005</td>
 							<td>Replacement</td>
@@ -209,8 +170,8 @@
 							<td>208316</td>
 							<td>8/9/14</td>
 							<td>Karen Kennedy</td>
-							<td>Assigned</td>
-							<td><button type="button" class="btn btn-success resolveButton"><span class="md-click-circle md-click-animate"></span>Resolved</button></td>
+							<td>Resolved</td>
+							<td>None</td>
 							</tr>
 							<tr><td>10000006</td>
 							<td>Replacement</td>
@@ -220,8 +181,8 @@
 							<td>640042</td>
 							<td>5/23/14</td>
 							<td>Jean Fils</td>
-							<td>Assigned</td>
-							<td><button type="button" class="btn btn-success resolveButton"><span class="md-click-circle md-click-animate"></span>Resolved</button></td>
+							<td>Resolved</td>
+							<td>None</td>
 							</tr>
 							<tr><td>10000007</td>
 							<td>No response</td>
@@ -231,8 +192,8 @@
 							<td>658590</td>
 							<td>4/26/15</td>
 							<td>An Dhat</td>
-							<td>Assigned</td>
-							<td><button type="button" class="btn btn-success resolveButton"><span class="md-click-circle md-click-animate"></span>Resolved</button></td>
+							<td>Resolved</td>
+							<td>None</td>
 							</tr>
 							<tr><td>92428951</td>
 							<td>No response</td>
@@ -370,7 +331,7 @@
 							<td>No response</td>
 							<td>Not turned on for 30 days</td>
 							<td>Medium</td>
-							<td>St. Boniface Hospital</td>
+							<td>St. Boniface</td>
 							<td>346985</td>
 							<td>1/19/13</td>
 							<td>Mark Brown</td>
@@ -381,7 +342,7 @@
 							<td>Maintenance</td>
 							<td>Lights out, suspected power outage</td>
 							<td>High</td>
-							<td>Saigon National Hospital</td>
+							<td>Saigon National </td>
 							<td>328871</td>
 							<td>10/10/14</td>
 							<td>Bill Farmer</td>
@@ -392,7 +353,7 @@
 							<td>Maintenance</td>
 							<td>Lights out, suspected power outage</td>
 							<td>High</td>
-							<td>Saigon National Hospital</td>
+							<td>Saigon National </td>
 							<td>411723</td>
 							<td>9/27/13</td>
 							<td>An Dhat</td>
@@ -403,7 +364,7 @@
 							<td>Usage</td>
 							<td>Not turned on for 10 days</td>
 							<td>Low</td>
-							<td>Hanoi County Hospital No. 3</td>
+							<td>Hanoi County  No. 3</td>
 							<td>569341</td>
 							<td>3/22/13</td>
 							<td>Efua Gyad</td>
@@ -411,6 +372,15 @@
 							<td>None</td>
 							</tr>
 
+							<!-- MORE BUTTONS 
+
+							<button type="button" class="btn btn-warning" data-toggle = "modal" href = "#basic"><span class="md-click-circle md-click-animate"></span>Assign</button>
+
+							<button type="button" class="btn btn-success resolveButton"><span class="md-click-circle md-click-animate"></span>Resolved</button>
+
+							<button type="button" class="btn btn-danger" data-toggle = "modal" href = "#basic"><span class="md-click-circle md-click-animate"></span>Follow-Up</button>
+
+-->
 							</tbody>
 							</table>
 						</div>
@@ -425,15 +395,17 @@
 								</div>
 								<div class="modal-body">
 									<p> Select person to follow up with: </p>
-									<select class="form-control">
+									<select class="form-control" id="piggy">
 										<option>Karen Kennedy</option>
+										<option>Melissa Chan </option>
+										<option>Jack Sparrow </option>
 									</select>
 									<br/>
 									<p> Optional Note: </p>
 									<textarea class="form-control" rows="3"></textarea>
 								<div class="modal-footer">
 									<button type="button" class="btn default" data-dismiss="modal">Close</button>
-									<button type="button" class="btn btn-warning" data-dismiss="modal">Assign</button>
+									<button type="button" class="btn btn-warning" data-dismiss="modal" id="assignmodal">Assign</button>
 								</div>
 							</div>
 							<!-- /.modal-content -->
@@ -441,28 +413,7 @@
 						<!-- /.modal-dialog -->
 					</div>
 
-					<div class="modal fade" id="basic" tabindex="-1" role="basic" aria-hidden="true">
-						<div class="modal-dialog">
-							<div class="modal-content">
-								<div class="modal-header">
-									<button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
-									<h4 class="modal-title">Modal Title</h4>
-								</div>
-								<div class="modal-body">
-									<p> Follow-up with: </p>
-									<input type="password" class="form-control" placeholder="Jack Bellhouse" disabled="">
-									<br/>
-									<p> Note: </p>
-									<textarea class="form-control" rows="3"></textarea>
-								<div class="modal-footer">
-									<button type="button" class="btn default" data-dismiss="modal">Close</button>
-									<button type="button" class="btn btn-warning" data-dismiss="modal">Assign</button>
-								</div>
-							</div>
-							<!-- /.modal-content -->
-						</div>
-						<!-- /.modal-dialog -->
-					</div>
+<!-- INSERT IT BACK IN HERE -->
 
 
 			</div>
@@ -516,15 +467,57 @@
 <script src="assets/global/scripts/metronic.js" type="text/javascript"></script>
 <script src="assets/admin/layout3/scripts/layout.js" type="text/javascript"></script>
 <script src="assets/admin/layout3/scripts/demo.js" type="text/javascript"></script>
-<script src="assets/admin/pages/scripts/table-advanced.js"></script>
+<script src="issues.js"></script>
 <script>
 jQuery(document).ready(function() {       
    Metronic.init(); // init metronic core components
-Layout.init(); // init current layout
-Demo.init(); // init demo features
+   Layout.init(); // init current layout
+   Demo.init(); // init demo features
+
+   
+
    TableAdvanced.init();
+
+   var testingpiggy;
+
+    $( "#assignmodal" ).click(function() {
+        var piggy = document.getElementById('piggy');
+        alert($('#piggy').val());
+        var testingpiggy = $('#piggy').val();
+        $('#pointperson').append(testingpiggy);
+        $("td:contains('Not Resolved')").html("Assigned");
+        $('#action').empty();
+        $('#action').append("<button type=\"button\" class=\"btn btn-success resolveButton\" id=\"resolve1\"><span class=\"md-click-circle md-click-animate\"></span>Resolved</button>");
+
+	})
+	
+$("#resolve1").live('click', function() {
+        $('#status').empty();
+        $('#status').append("Resolved");
+        $('#action').empty();
+        $('#action').append("None");
+
 });
+
+$("#resolve2").live('click', function() {
+        $('#status2').empty();
+        $('#status2').append("Resolved");
+        $('#action2').empty();
+        $('#action2').append("None");
+
+});
+
+});
+
+
+
 </script>
+
+
+
+
+
+
 </body>
 <!-- END BODY -->
 </html>
