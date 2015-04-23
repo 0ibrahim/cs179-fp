@@ -5,12 +5,16 @@ var TableAdvanced = function () {
     var initTable3 = function () {
         var table = $('#sample_3');
 
-        
         /* Formatting function for row details */
         function fnFormatDetails(oTable, nTr) {
             var aData = oTable.fnGetData(nTr);
+            var todayDate = new Date();
             var sOut = '<table>';
-            sOut += testingpiggy;
+            sOut += '<tr><td>Date Assigned:</td><td>' + todayDate + '</td></tr>';
+            sOut += '<tr><td>Assigned Person:</td><td>Karen Kennedy</td></tr>';
+            sOut += '<tr><td>Assigned Contact Information:</td><td>karenkennedy@socialenterprise.org</td></tr>';
+            sOut += '<tr><td>Hospital Administrator:</td><td>Dr. Bob White</td></tr>';
+            sOut += '<tr><td>Hosp. Admin Contact</td><td>bobwhite@hospital.org</td></tr>';
             sOut += '</table>';
 
             return sOut;
