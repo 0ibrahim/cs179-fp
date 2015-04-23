@@ -15,6 +15,7 @@ var TableAdvanced = function () {
             sOut += '<tr><td>Assigned Contact Information:</td><td>karenkennedy@socialenterprise.org</td></tr>';
             sOut += '<tr><td>Hospital Administrator:</td><td>Dr. Bob White</td></tr>';
             sOut += '<tr><td>Hosp. Admin Contact</td><td>bobwhite@hospital.org</td></tr>';
+            sOut += '<tr><td>Note:</td><td>Send new firefly</td></tr>';
             sOut += '</table>';
 
             return sOut;
@@ -65,11 +66,11 @@ var TableAdvanced = function () {
                 [1, 'asc']
             ],
             "lengthMenu": [
-                [10, 20, -1],
-                [10, 20, "All"] // change per page values here
+                [20, -1],
+                [20, "All"] // change per page values here
             ],
             // set the initial value
-            "pageLength": 10,
+            "pageLength": 20,
         });
         var tableWrapper = $('#sample_3_wrapper'); // datatable creates the table wrapper by adding with id {your_table_jd}_wrapper
 
