@@ -47,6 +47,8 @@ var Index = function() {
                     showTooltip: true,
                     onLabelShow: function(event, label, code) {
 
+                        label.html(label.html()+' (Active Fireflies - '+sample_data[code]+')');
+
                     },
                     onRegionOver: function(event, code) {
                         if (code == 'ca') {
