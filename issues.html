@@ -148,8 +148,8 @@
 							<td>951008</td>
 							<td>4/24/15</td>
 							<td id="pointperson"> </td>
-							<td id='status'>Not Resolved</td>
-							<td id='action'><button type="button" class="btn btn-warning" data-toggle = "modal" href = "#basic" id='assignbutton'><span class="md-click-circle md-click-animate"></span>Assign</button></td>
+							<td id='status1'>Not Resolved</td>
+							<td id='action1'><button type="button" class="btn btn-warning" data-toggle = "modal" href = "#basic" id='assignbutton1'><span class="md-click-circle md-click-animate"></span>Assign</button></td>
 							</tr>
 							<tr><td>10000005</td>
 							<td>Usage</td>
@@ -160,7 +160,7 @@
 							<td>4/30/15</td>
 							<td>Karen Kennedy</td>
 							<td id='status2'>Assigned</td>
-							<td id='action2'> <button type="button" class="btn btn-success resolveButton" id="resolve2"><span class="md-click-circle md-click-animate"></span>Resolved</button></td>
+							<td id='action2'> <button type="button" class="btn btn-success resolveButton" id="resolvedbutton2"><span class="md-click-circle md-click-animate"></span>Resolved</button></td>
 							</tr>
 							<tr><td>10000005</td>
 							<td>Replacement</td>
@@ -373,13 +373,9 @@
 							</tr>
 
 							<!-- MORE BUTTONS 
-
 							<button type="button" class="btn btn-warning" data-toggle = "modal" href = "#basic"><span class="md-click-circle md-click-animate"></span>Assign</button>
-
 							<button type="button" class="btn btn-success resolveButton"><span class="md-click-circle md-click-animate"></span>Resolved</button>
-
 							<button type="button" class="btn btn-danger" data-toggle = "modal" href = "#basic"><span class="md-click-circle md-click-animate"></span>Follow-Up</button>
-
 -->
 							</tbody>
 							</table>
@@ -401,7 +397,7 @@
 										<option>Jack Sparrow </option>
 									</select>
 									<br/>
-									<p id="optionalnote"> Optional Note: </p>
+									<p> Optional Note: </p>
 									<textarea class="form-control" rows="3"></textarea>
 								<div class="modal-footer">
 									<button type="button" class="btn default" data-dismiss="modal">Close</button>
@@ -474,20 +470,18 @@ jQuery(document).ready(function() {
    Metronic.init(); // init metronic core components
    Layout.init(); // init current layout
    Demo.init(); // init demo features
-
+   
    TableAdvanced.init();
-
    var testingpiggy;
 
-    $( "#assignmodal" ).click(function() {
-        var piggy = document.getElementById('piggy');
+	$( "#assignmodal" ).click(function() {
+        
         var testingpiggy = $('#piggy').val();
+        
         $('#pointperson').append(testingpiggy);
         $("td:contains('Not Resolved')").html("Assigned");
-        $('#action').empty();
-        $('#action').append("<button type=\"button\" class=\"btn btn-success resolveButton\" id=\"resolve1\"><span class=\"md-click-circle md-click-animate\"></span>Resolved</button>");
-
-        var note = $('#optionalnote').val()
+        $('#action1').empty();
+        $('#action1').append("<button type=\"button\" class=\"btn btn-success resolveButton\" id=\"newresolvedbutton\"><span class=\"md-click-circle md-click-animate\"></span>Resolved</button>"); 
 
         $.ajax({
 		  
@@ -495,7 +489,6 @@ jQuery(document).ready(function() {
 		  type: 'POST',
 		  data: {
 		    'key':'TQxM882IFC64hUJPMhDM3Q',
-		    "template_name": "Firefly Echo 2",
 		    'message': {
 		      'from_email': 'melissachanhk@gmail.com',
 		      'to': [
@@ -508,37 +501,30 @@ jQuery(document).ready(function() {
 		        ],
 		      'autotext': 'true',
 		      'subject': 'Firefly Action Required',
-		      'html': 'Please follow up with Issue ID 10000001. </br> Type of Problem: Maintenance </br> Issue Detail: Lights out, suspected power surge </br> Severity: High </br> Hospital: Hanoi County No. 3 </br> Serial No: 951008 </br> First Reported: 4/24/15 </br> Assigned by: Social Enterprise </br> Additional Note' + note
+		      'html': 'Please follow up with Issue ID 10000001. </br> Type of Problem: Maintenance </br> Issue Detail: Lights out, suspected power surge </br> Severity: High </br> Hospital: Hanoi County No. 3 </br> Serial No: 951008 </br> First Reported: 4/24/15 </br> Assigned by: Social Enterprise </br> Additional Note'
 		    }
 		  }
 		 }).done(function(response) {
 		   console.log(response); // if you're into that sorta thing
 		 });
-	});
+        
+        $("#newresolvedbutton").on('click', function() {
+	        $('#status1').empty();
+	        $('#status1').append("Resolved");
+	        $('#action1').empty();
+	        $('#action1').append("None");
+		});
+	})
 	
-$("#resolve1").on('click', function() {
-        $('#status').empty();
-        $('#status').append("Resolved");
-        $('#action').empty();
-        $('#action').append("None");
-
-});
-
-$("#resolve2").on('click', function() {
+$("#resolvedbutton2").on('click', function() {
         $('#status2').empty();
         $('#status2').append("Resolved");
         $('#action2').empty();
         $('#action2').append("None");
-
-
-
-
-});
-
 });
 
 
-
+});
 </script>
 
 
