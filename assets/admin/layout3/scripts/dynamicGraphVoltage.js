@@ -55,7 +55,8 @@
 
 		var plotVoltage = $.plot("#voltageGraph", [ getRandomVoltage() ], {
 			series: {
-				shadowSize: 0	// Drawing is faster without shadows
+				shadowSize: 0, 
+				color: 2// Drawing is faster without shadows
 
 			},
 			yaxis: {

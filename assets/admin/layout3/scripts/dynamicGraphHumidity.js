@@ -18,10 +18,10 @@
 				var prev = dataHumidity.length > 0 ? dataHumidity[dataHumidity.length - 1] : 50,
 					y = prev + Math.random() * 10 - 5;
 
-				if (y < 90) {
-					y = 90;
-				} else if (y > 110) {
-					y = 110;
+				if (y < 30) {
+					y = 30;
+				} else if (y > 65) {
+					y = 65;
 				}
 
 				dataHumidity.push(y);
@@ -55,14 +55,15 @@
 
 		var plotHumidity = $.plot("#humidityGraph", [ getRandomHumidity() ], {
 			series: {
-				shadowSize: 0	// Drawing is faster without shadows
+				shadowSize: 0,	// Drawing is faster without shadows
+				color: 3
 
 			},
 			yaxis: {
 				min: 0,
-				max: 150,
-				ticks: 15,
-				axisLabel: "Humidity (Volts)",
+				max: 100,
+				ticks: 10,
+				axisLabel: "Humidity (Percent)",
 				labelWidth: 30
 			},
 			xaxis: {
