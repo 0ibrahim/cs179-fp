@@ -19,6 +19,20 @@
 <link href="assets/global/plugins/simple-line-icons/simple-line-icons.min.css" rel="stylesheet" type="text/css">
 <link href="assets/global/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css">
 <link href="assets/global/plugins/uniform/css/uniform.default.css" rel="stylesheet" type="text/css">
+<style>
+.demo-placeholder {
+	width: 270px;
+	height: 200px;
+}
+
+.flot-y-axis {
+	margin-left: -20px;
+}
+
+
+</style>
+
+
 <!-- END GLOBAL MANDATORY STYLES -->
 <!-- BEGIN PAGE LEVEL STYLES -->
 <link rel="stylesheet" type="text/css" href="assets/global/plugins/select2/select2.css"/>
@@ -543,13 +557,25 @@
 					</div>
 					<!-- END EXAMPLE TABLE PORTLET-->
 					<div class="modal fade bs-modal-lg" id="basic" tabindex="-1" role="dialog" aria-hidden="true" style="display: none">
-						<div class="modal-dialog" style="width: 1100px">
+						<div class="modal-dialog" style="width: 900px">
 							<div class="modal-content">
 								<div class="modal-header">
 									<button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
-									<h4 class="modal-title">Modal Title</h4>
+									<h4 class="modal-title">Firefly details</h4>
 								</div>
 								<div class="modal-body">
+								<label class="col-md-6 control-label"> Serial No. </label>
+								<label class="col-md-6 control-label"> Hospital </label>
+								<label class="col-md-6 control-label"> Batch No. </label>
+								<label class="col-md-6 control-label"> Donor </label>
+								<label class="col-md-6 control-label"> First Use</label>
+								<label class="col-md-6 control-label"> Time Used </label>
+								<label class="col-md-6 control-label"> Status </label>
+								<label class="col-md-6 control-label"> Usage % </label>
+
+								<div id="temperatureGraph" class="demo-placeholder col-md-4"></div>
+								<div id="voltageGraph" class="demo-placeholder col-md-4"></div>
+								<div id="humidityGraph" class="demo-placeholder col-md-4"></div>
 									
 
 
@@ -622,18 +648,24 @@
 <!-- END PAGE LEVEL PLUGINS -->
 <!-- BEGIN PAGE LEVEL SCRIPTS -->
 <script src="assets/global/scripts/metronic.js" type="text/javascript"></script>
+<script language="javascript" type="text/javascript" src="assets/global/scripts/jquery.flot.js"></script>
+<script language="javascript" type="text/javascript" src="assets/global/scripts/jquery.flot.time.js"></script>
 <script src="assets/admin/layout3/scripts/layout.js" type="text/javascript"></script>
 <script src="assets/admin/layout3/scripts/demo.js" type="text/javascript"></script>
 <script src="assets/admin/pages/scripts/table-advanced.js"></script>
 <script src="assets/admin/layout3/scripts/fireflies.js" type="text/javascript"></script>
+<script src="assets/admin/pages/scripts/jquery.flot.axislabels.js"></script>
+<script src="assets/admin/layout3/scripts/dynamicGraph.js" type="text/javascript"></script>
+
+
 <script>
 jQuery(document).ready(function() {       
    Metronic.init(); // init metronic core components
-Layout.init(); // init current layout
-Demo.init(); // init demo features
-   TableAdvanced.init();
-
+	Layout.init(); // init current layout
+	Demo.init(); // init demo features
+	TableAdvanced.init();
 });
+
 </script>
 </body>
 <!-- END BODY -->
