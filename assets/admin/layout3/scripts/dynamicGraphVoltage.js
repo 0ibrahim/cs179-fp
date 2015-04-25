@@ -56,7 +56,9 @@
 		var plotVoltage = $.plot("#voltageGraph", [ getRandomVoltage() ], {
 			series: {
 				shadowSize: 0, 
-				color: 2// Drawing is faster without shadows
+				color: 2,
+				clickable: true,
+				hoverable: true// Drawing is faster without shadows
 
 			},
 			yaxis: {
@@ -69,7 +71,47 @@
 			xaxis: {
 				show: false
 
-			}
+			},
+			  grid: {
+			  	hoverable: true,
+			  	clickable: true,
+			    markings: [
+			      { color: 'red', lineWidth: 1, yaxis: { from: 91, to: 91 } }
+			      ,{ color: 'red', lineWidth: 1, yaxis: { from: 115, to: 115 } }
+			    ]
+			  }
+		});
+
+		$("<div id='tooltipVoltage'></div>").css({
+			position: "absolute",
+			display: "none",
+			border: "1px solid #fdd",
+			padding: "2px",
+			"background-color": "#fee",
+			opacity: 0.80
+		}).appendTo(".modal-body");
+
+		$("#voltageGraph").bind("plothover", function (event, pos, item) {
+
+			// if ($("#enablePosition:checked").length > 0) {
+			// 	var str = "(" + pos.x.toFixed(2) + ", " + pos.y.toFixed(2) + ")";
+			// 	$("#hoverdata").text(str);
+			// }
+
+			// if ($("#enableTooltip:checked").length > 0) {
+				if (item) {
+					var x = item.datapoint[0].toFixed(2),
+						y = item.datapoint[1].toFixed(2);
+
+						console.log(x)
+
+					$("#tooltipVoltage").html("Voltage: " + y + " Volts")
+						.css({top: item.pageY - 200, left: item.pageX - 200})
+						.fadeIn(200);
+				} else {
+					$("#tooltipVoltage").hide();
+				}
+			
 		});
 
 		function updateVoltage() {

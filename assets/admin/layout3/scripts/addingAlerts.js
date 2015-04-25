@@ -1,5 +1,5 @@
 function showAlert() {
-	toastr["warning"]("New Firefly was added. This is a dummy error.", "Firefly added")
+	toastr["warning"]("This is a sample maintainance request..", "1 maintainance request")
 }
 
 var listObject = $("#myHiddenList").clone();
@@ -15,7 +15,6 @@ function addAlertToFeed() {
 }
 
 $(".alertButton").click(function(){
-	console.log("working")
 	$(this).closest('.li').remove();
 });
 
@@ -25,4 +24,4 @@ $(".resolveButton").click(function(){
 	tr.html("Resolved");
 });
 
-setInterval(addAlertToFeed, 10000);
+setInterval(addAlertToFeed, 8000);
