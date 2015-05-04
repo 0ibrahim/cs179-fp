@@ -11,11 +11,9 @@ var TableAdvanced = function () {
             var todayDate = new Date();
             var sOut = '<table>';
             sOut += '<tr><td>Date Assigned:</td><td>' + todayDate + '</td></tr>';
-            sOut += '<tr><td>Note:</td><td>Ask if firefly was damaged during surge</td></tr>';
             sOut += '<tr><td>Days of Use:</td><td>382 days</td></tr>';
             sOut += '<tr><td>Expected Remaining Lifetime:</td><td>852 days</td></tr>';
             sOut += '<tr><td>Previous Issues:</td><td>None</td></tr>';
-            sOut += '<tr><td>Assigned Person:</td><td>Karen Kennedy, karenkennedy@socialenterprise.org</td></tr>';
             sOut += '<tr><td>Hospital Administrator:</td><td>Dr. Bob White, bobwhite@hospital.org</td></tr>';
             sOut += '</table>';
 
