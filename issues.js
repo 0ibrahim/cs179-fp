@@ -10,7 +10,6 @@ var TableAdvanced = function () {
             var aData = oTable.fnGetData(nTr);
             var todayDate = new Date();
             var sOut = '<table>';
-            sOut += '<tr><td>Date Assigned:</td><td>' + todayDate + '</td></tr>';
             sOut += '<tr><td>Days of Use:</td><td>382 days</td></tr>';
             sOut += '<tr><td>Expected Remaining Lifetime:</td><td>852 days</td></tr>';
             sOut += '<tr><td>Previous Issues:</td><td>None</td></tr>';
