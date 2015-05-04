@@ -61,7 +61,7 @@ var TableAdvanced = function () {
                 "targets": [0]
             }],
             "order": [
-                [1, 'asc']
+                [7, 'dsc']
             ],
             "lengthMenu": [
                 [20, -1],
