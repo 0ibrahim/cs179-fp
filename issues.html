@@ -160,7 +160,7 @@
 							<td>4/30/15</td>
 							<td>Karen Kennedy</td>
 							<td id='status2'>Assigned</td>
-							<td id='action2'> <button type="button" class="btn btn-success resolveButton" id="resolvedbutton2"><span class="md-click-circle md-click-animate"></span>Mark Resolved</button></td>
+							<td id='action2'> <a data-toggle="modal" href="#basic2"><button type="button" class="btn btn-success resolveButton"><span class="md-click-circle md-click-animate"></span>Mark Resolved</button></a></td>
 							</tr>
 							<tr><td>10000005</td>
 							<td>Replacement</td>
@@ -381,6 +381,25 @@
 							</table>
 						</div>
 					</div>
+					<div class="modal fade" id="basic2" tabindex="-1" role="basic2" aria-hidden="true" style="display: none;">
+								<div class="modal-dialog">
+									<div class="modal-content">
+										<div class="modal-header">
+											<button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+											<h4 class="modal-title">Confirmation</h4>
+										</div>
+										<div class="modal-body">
+											 Are you sure you want to resolve this issue?
+										</div>
+										<div class="modal-footer">
+											<button type="button" class="btn default" data-dismiss="modal">No</button>
+											<button type="button" class="btn green" data-dismiss="modal" id = "resolvedbutton2">Resolve</button>
+										</div>
+									</div>
+									<!-- /.modal-content -->
+								</div>
+								<!-- /.modal-dialog -->
+							</div>
 					<!-- END EXAMPLE TABLE PORTLET-->
 					<div class="modal fade" id="basic" tabindex="-1" role="basic" aria-hidden="true">
 						<div class="modal-dialog">
