@@ -73,7 +73,7 @@
 			  	hoverable: true,
 			  	clickable: true,
 			    markings: [
-			      { color: 'red', lineWidth: 1, yaxis: { from: 5, to: 5 } }
+			      { color: 'red', lineWidth: 1, yaxis: { from: 5, to: 5 }, label: 'min' }
 			      ,{ color: 'red', lineWidth: 1, yaxis: { from: 45, to: 45 } }
 			    ]
 			  }
