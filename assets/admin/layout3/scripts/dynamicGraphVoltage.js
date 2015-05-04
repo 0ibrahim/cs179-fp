@@ -64,12 +64,17 @@
 			yaxis: {
 				min: 0,
 				max: 150,
-				ticks: 15,
+				ticks: 10,
 				axisLabel: "Voltage (Volts)",
 				labelWidth: 30
 			},
 			xaxis: {
-				show: false
+				show: true,
+				min: 0,
+				max: 24,
+				ticks: 8,
+				axisLabel: "Time (hrs)",
+				labelHeight: 20
 
 			},
 			  grid: {

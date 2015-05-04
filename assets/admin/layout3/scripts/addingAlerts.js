@@ -1,5 +1,5 @@
 function showAlert() {
-	toastr["warning"]("This is a sample maintainance request..", "1 maintainance request")
+	toastr["warning"]("Lights out, power surge", "Maintainance request")
 }
 
 var listObject = $("#myHiddenList").clone();
@@ -24,4 +24,4 @@ $(".resolveButton").click(function(){
 	tr.html("Resolved");
 });
 
-setInterval(addAlertToFeed, 8000);
+setInterval(addAlertToFeed, 11000);
